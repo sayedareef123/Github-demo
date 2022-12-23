@@ -5,7 +5,7 @@ provider "aws" {
 variable "name" {
 type = string
 description = (optional) describe your variable
-default = "aree-tf"
+default = "areef-tf"
 }
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
