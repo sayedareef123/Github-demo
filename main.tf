@@ -12,7 +12,7 @@ resource "tls_private_key" "private_key" {
   rsa_bits = "2048"
 }
   
- resource "aws_key_pair" "areef" {
+ resource "aws_key_pair" "key_pair" {
   key_name = var.name
   public_key = tls_private_key.private_key.private_key_pem
   tags = {
