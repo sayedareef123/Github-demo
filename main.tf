@@ -1,6 +1,12 @@
 provider "aws" {
   region = "us-east-1"   
 }
+
+variable "name" {
+type = string
+description = (optional) describe your variable
+default = "aree-tf"
+}
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
   rsa_bits = "2048"
