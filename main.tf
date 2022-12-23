@@ -7,6 +7,7 @@ variable "name" {
     description = "(optional) des variable"
     default = "areefs"
 }
+
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
   rsa_bits = "2048"
