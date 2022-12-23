@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 variable "name" {
-type = string
-description = (optional) describe your variable
-default = "areef-tf"
+    type = string
+    description = "(optional) des variable"
+    default = "areef-tf"
 }
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
@@ -14,7 +14,7 @@ resource "tls_private_key" "private_key" {
   
  resource "aws_key_pair" "areef" {
   key_name = var.name
-  public_key = tls_private_key.private_key.public_key_openssh
+  public_key = tls_private_key.private_key.private_key_pem
   tags = {
     Name = var.name
   }
